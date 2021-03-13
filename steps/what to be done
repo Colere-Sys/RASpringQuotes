@@ -1,2 +1,3 @@
 1 - add database name in resources file in the place of /nomdelabase
-2 - fill the database with 3 users and 3 quotes
+2 - creer un dossier -> Sqlschemas , mettre de dans le fichier sql qui genere la database
+3 - fill the database with 3 users and 3 quotes
