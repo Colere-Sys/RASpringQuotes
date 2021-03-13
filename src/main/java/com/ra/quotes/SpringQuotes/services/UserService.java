@@ -13,8 +13,6 @@ import java.util.List;
 @Service
 public class UserService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-
     /**
      * should return all users in db
       * @return
