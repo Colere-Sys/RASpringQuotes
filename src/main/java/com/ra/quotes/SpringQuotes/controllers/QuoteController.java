@@ -17,9 +17,9 @@ public class QuoteController {
     @Autowired
     private QuoteService quoteService;
 
-    // Validate quote to create
     @PostMapping("/quote/create")
-    public void createUser(@RequestBody Quote quoteToCreate) {
+    public void createQuote(@RequestBody Quote quoteToCreate) {
+        // validate if the quote is well received
         quoteService.validate(quoteToCreate);
 
     }
