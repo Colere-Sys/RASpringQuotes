@@ -1,3 +1,6 @@
 1 - add database name in resources file in the place of /nomdelabase
 2 - create directory -> Sqlschemas , and add to it dbscript.sql
 3 - fill the database with 3 users and 3 quotes
+4 - create a controller that takes into body a Quote object and gives it to a QuoteService.validate() logic of validate to be decided later. POST endpoint
+: quote/create
+
