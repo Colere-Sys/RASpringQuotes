@@ -14,6 +14,7 @@ import java.lang.invoke.MethodHandles;
 public class QuoteService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
+    // validate if the quote is well received
     public void validate (Quote quoteToValidate) {
         if (quoteToValidate == null) {
             throw new SpringQuotesException("Quote is null");
