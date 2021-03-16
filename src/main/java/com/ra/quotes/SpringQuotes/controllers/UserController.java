@@ -1,7 +1,7 @@
 package com.ra.quotes.SpringQuotes.controllers;
 
 
-import com.ra.quotes.SpringQuotes.datamodel.User;
+import com.ra.quotes.SpringQuotes.datamodel.UserTO;
 import com.ra.quotes.SpringQuotes.services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,11 +21,8 @@ public class UserController {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     @GetMapping("/users")
-    List<User> getAllUsers() {
-        //this endpoint should only be accessible by a high privileged user, will get to that later.
-
+    List<UserTO> getAllUsers() {
         return userService.getAllUsers();
-
     }
 
 }
