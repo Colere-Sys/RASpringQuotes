@@ -1,7 +1,6 @@
 package com.ra.quotes.SpringQuotes.controllers;
 
 import com.ra.quotes.SpringQuotes.datamodel.Quote;
-import com.ra.quotes.SpringQuotes.datamodel.UserTO;
 import com.ra.quotes.SpringQuotes.services.QuoteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
