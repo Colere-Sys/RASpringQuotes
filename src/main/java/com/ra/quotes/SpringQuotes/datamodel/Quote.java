@@ -1,18 +1,43 @@
 package com.ra.quotes.SpringQuotes.datamodel;
 
-public class Quote {
+import javax.persistence.*;
 
+@Entity
+@Table
+public class Quote {
+    @Id
+    @SequenceGenerator(
+            name = "quote_sequence",
+            sequenceName = "quote_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "quote_sequence"
+    )
+    private long id;
     private String source;
     private String dateOf;
     private String text;
     private String genre;
-    private int id;
 
     public Quote(String source, String dateOf, String text, String genre) {
         this.source = source;
         this.dateOf = dateOf;
         this.text = text;
         this.genre = genre;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getSource() {

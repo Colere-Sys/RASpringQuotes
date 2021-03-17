@@ -1,6 +1,21 @@
 package com.ra.quotes.SpringQuotes.datamodel;
 
-public class User {
+import javax.persistence.*;
+
+@Entity
+@Table
+public class UserTO {
+    @Id
+    @SequenceGenerator(
+            name = "user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_sequence"
+    )
+    private long id;
     private String firstname;
     private String lastname;
     private String username;
@@ -8,16 +23,28 @@ public class User {
     private int age;
     private String lastlogin;
 
-    public User () {
+    public UserTO() {
 
     }
 
-    public User(String firstname, String lastname, String phone, int age, String lastlogin) {
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public UserTO(String firstname, String lastname, String phone, int age, String lastlogin) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.phone = phone;
         this.age = age;
         this.lastlogin = lastlogin;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getFirstname() {
