@@ -3,7 +3,6 @@ package com.ra.quotes.SpringQuotes.services;
 import com.ra.quotes.SpringQuotes.Exception.SpringQuotesException;
 import com.ra.quotes.SpringQuotes.dao.QuoteDAO;
 import com.ra.quotes.SpringQuotes.datamodel.Quote;
-import com.ra.quotes.SpringQuotes.datamodel.UserTO;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
