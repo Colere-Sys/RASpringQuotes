@@ -17,7 +17,7 @@ import java.util.List;
 public class QuoteService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     @Autowired
-    QuoteDAO quoteDAO;
+    private QuoteDAO quoteDAO;
 
     // validate if the quote is well received
     public void validate(Quote quoteToValidate) {
