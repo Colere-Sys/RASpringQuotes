@@ -1,10 +1,12 @@
-1 - add database name in resources file in the place of /nomdelabase
-2 - create directory -> Sqlschemas , and add to it dbscript.sql
-3 - fill the database with 3 users and 3 quotes
-4 - create a controller that takes into body a Quote object and gives it to a QuoteService.validate() logic of validate to be decided later. POST endpoint
-: quote/create
-5- delete all tables that we manually created in pgadmin we're going to create them using spring-data-jpa
-6- make sure that your config file is set upp correctly for your database (springquotes) and make sure to delete previous tables.
-7- ONLY WHEN ALL TABLES ARE DELETED AND CONFIG IS CORRECT, run the program the spring app should create for you 2 tables UserTO and Quotes
- - with 2 primary keys both of them auto incrementing and of type Long.
-8- after doing this create in QuoteService add the same logic to retrieve all quotes from the table (you will need to create an interface like UserDAO and autowire it in the service and use it to return findAll()
+1 - add database name in resources file in the place of /nomdelabase (done)
+2 - create directory -> Sqlschemas , and add to it dbscript.sql (done)
+3 - fill the database with 3 users and 3 quotes (done)
+4 - create a controller that takes into body a Quote object and gives it to a QuoteService.validate() logic of validate
+ to be decided later. POST endpoint : quote/create (done)
+5- delete all tables that we manually created in pgadmin we're going to create them using spring-data-jpa (done)
+6- make sure that your config file is set upp correctly for your database (springquotes) and make sure to delete
+ previous tables.(done)
+7- ONLY WHEN ALL TABLES ARE DELETED AND CONFIG IS CORRECT, run the program the spring app should create for you 2
+ tables UserTO and Quotes with 2 primary keys both of them auto incrementing and of type Long.(done)
+8- after doing this create in QuoteService add the same logic to retrieve all quotes from the table
+(you will need to create an interface like UserDAO and autowire it in the service and use it to return findAll() (done)
