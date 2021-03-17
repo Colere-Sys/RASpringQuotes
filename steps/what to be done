@@ -10,3 +10,5 @@
  tables UserTO and Quotes with 2 primary keys both of them auto incrementing and of type Long.(done)
 8- after doing this create in QuoteService add the same logic to retrieve all quotes from the table
 (you will need to create an interface like UserDAO and autowire it in the service and use it to return findAll() (done)
+9- You need to use the same creation for quotes, the create quote endpoint should also return us the quote created, after creating the endpoint
+ test both UserController create and QuoteController create, and put the database screenshots in a folder you create under /resources/images
