@@ -6,11 +6,7 @@ import com.ra.quotes.SpringQuotes.services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.lang.invoke.MethodHandles;
 import java.util.List;
@@ -27,8 +23,8 @@ public class UserController {
     private List<UserTO> getAllUsers() {
         return userService.getAllUsers();
     }
-    @PostMapping("/user/create")
-    public UserTO createUser(@RequestParam UserTO user) {
+    @PostMapping(value = "/user/create", consumes = "application/json")
+    public UserTO createUser(@RequestBody UserTO user) {
         return userService.createUser(user);
     }
 }
