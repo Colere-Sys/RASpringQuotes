@@ -32,10 +32,6 @@ public class Quote {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -44,28 +40,28 @@ public class Quote {
         return source;
     }
 
-    public String getDateOf() {
-        return dateOf;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public String getDateOf() {
+        return dateOf;
     }
 
     public void setDateOf(String dateOf) {
         this.dateOf = dateOf;
     }
 
+    public String getText() {
+        return text;
+    }
+
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getGenre() {
+        return genre;
     }
 
     public void setGenre(String genre) {
