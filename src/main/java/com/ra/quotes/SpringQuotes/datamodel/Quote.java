@@ -28,14 +28,12 @@ public class Quote {
         this.genre = genre;
     }
 
+    public Quote() {
+    }
+
     public long getId() {
         return id;
     }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getSource() {
         return source;
     }
