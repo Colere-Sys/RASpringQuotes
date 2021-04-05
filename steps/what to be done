@@ -10,3 +10,7 @@
  tables UserTO and Quotes with 2 primary keys both of them auto incrementing and of type Long.(done)
 8- after doing this create in QuoteService add the same logic to retrieve all quotes from the table
 (you will need to create an interface like UserDAO and autowire it in the service and use it to return findAll() (done)
+9- change the validation procedure we have for User & Quote creation, no field of quote should be empty or null, no field of user should
+be empty or null, Do not raise an exception in case a condition is violated by return a response code of BAD_REQUEST, in order to do so the validation
+method should return a boolean and depending on that boolean you return a response code, for that, you will need to change the return type
+of each creation method to ResponseEntity<Quote> or ResponseEntity<UserTO> here is a reference on that. https://www.baeldung.com/spring-response-entity
