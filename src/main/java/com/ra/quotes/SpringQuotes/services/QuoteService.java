@@ -3,11 +3,13 @@ package com.ra.quotes.SpringQuotes.services;
 import com.ra.quotes.SpringQuotes.Exception.SpringQuotesException;
 import com.ra.quotes.SpringQuotes.dao.QuoteDAO;
 import com.ra.quotes.SpringQuotes.datamodel.Quote;
+import com.ra.quotes.SpringQuotes.datamodel.UserTO;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 import java.lang.invoke.MethodHandles;
@@ -37,4 +39,9 @@ public class QuoteService {
         return quoteDAO.findAll();
     }
 
+    public Quote createQuote(Quote quoteToCreate) {
+        //this method will create the quote and return the same quote to us.
+        Quote createQuote = quoteDAO.save(quoteToCreate);
+        return createQuote;
+    }
 }
