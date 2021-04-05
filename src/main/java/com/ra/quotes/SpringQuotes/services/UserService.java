@@ -19,10 +19,13 @@ public class UserService {
       * @return
      */
     public List<UserTO> getAllUsers() {
-
-        //find all fait parti de la class JpaRepository, les operations CRUD (create, read, update, delete) on a pas besoin de les programmer
-        // ils sont fourni par spring si on veut des operations speciaux on peut ecrire nos requete nos meme @Query.
         return userDAO.findAll();
+    }
+
+    public UserTO createUser(UserTO userToCreate) {
+        //this method will create the user and return the same user to us.
+        UserTO createdUser = userDAO.save(userToCreate);
+        return createdUser;
     }
 
 }

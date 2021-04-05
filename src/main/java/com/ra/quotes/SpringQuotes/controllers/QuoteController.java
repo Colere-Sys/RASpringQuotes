@@ -1,10 +1,12 @@
 package com.ra.quotes.SpringQuotes.controllers;
 
 import com.ra.quotes.SpringQuotes.datamodel.Quote;
+import com.ra.quotes.SpringQuotes.datamodel.UserTO;
 import com.ra.quotes.SpringQuotes.services.QuoteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +21,10 @@ public class QuoteController {
     @Autowired
     private QuoteService quoteService;
 
-    @PostMapping("/quote/create")
-    public void createQuote(@RequestBody Quote quoteToCreate) {
+    @PostMapping(value = "/quote/create" ,consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Quote createQuote(@RequestBody Quote quoteToCreate) {
         quoteService.validate(quoteToCreate);
+        return quoteService.createQuote(quoteToCreate);
     }
     @GetMapping("/quotes")
     List<Quote> getAllQuotes() {
