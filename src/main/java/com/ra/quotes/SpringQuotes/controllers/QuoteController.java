@@ -1,6 +1,7 @@
 package com.ra.quotes.SpringQuotes.controllers;
 
 import com.ra.quotes.SpringQuotes.datamodel.Quote;
+import com.ra.quotes.SpringQuotes.datamodel.UserTO;
 import com.ra.quotes.SpringQuotes.services.QuoteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,8 +22,9 @@ public class QuoteController {
     private QuoteService quoteService;
 
     @PostMapping(value = "/quote/create" ,consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void createQuote(@RequestBody Quote quoteToCreate) {
+    public Quote createQuote(@RequestBody Quote quoteToCreate) {
         quoteService.validate(quoteToCreate);
+        return quoteService.createQuote(quoteToCreate);
     }
     @GetMapping("/quotes")
     List<Quote> getAllQuotes() {
